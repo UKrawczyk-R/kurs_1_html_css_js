@@ -1,0 +1,57 @@
+
+*
+{
+    margin: 0;
+}
+#container > *:not(#middle-flow)/*wszytstkie pierwsze elementy(bezposrednie dzieci) header div i footer*/
+{
+ min-height: 100px;
+
+ display: -webkit-flex;
+ display: -ms-flexbox;
+ display: -moz-box;
+
+-webkit-box-pack: center;
+-moz-box-pack: center;
+ justify-content: center;
+ -ms-flex-pack: center;
+
+ -ms-flex-align: center;
+ align-items: center;
+}
+#middle-flow
+{
+
+    display: -webkit-flex;   
+    display: -ms-flexbox;
+    display: -moz-box;
+    flex-direction: row; 
+    -ms-flex-direction: row; 
+    box-orient: horizontal;
+}
+header
+{
+    background-color: brown;
+}
+nav
+{
+    -ms-flex: 1;
+    flex: 1;
+    background-color: rgb(165, 42, 144);
+}
+article
+{
+    -ms-flex: 7; 
+    flex: 7;
+    background-color: rgb(91, 165, 42);
+} 
+aside
+{
+    -ms-flex: 1;
+    flex: 1;
+    background-color: rgb(42, 116, 165);
+}
+footer
+{
+    background-color: rgb(165, 142, 42);
+}

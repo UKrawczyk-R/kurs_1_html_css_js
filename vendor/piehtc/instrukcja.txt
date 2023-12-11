@@ -1,0 +1,2 @@
+ behavior: url(../PIE.htc); nalezy wkleić w css pod każda regułą do której ma być zastosowany między innymi: box shadow, gradientami, border radius border image, backround css3 rgba
+plik należy dodać do głownego drzewa na równi z index html
