@@ -1,0 +1,102 @@
+.zmienKolor
+{
+    color: red;
+    
+}
+.buttonSmaller
+{
+    font-size: 30px;
+}
+.buttonBiger
+{
+    font-size: 40px;
+}
+#hint
+{
+    display: none;
+    background-color: aquamarine;
+    position: absolute;
+    padding: 5px;
+    width: 100px;
+
+}
+
+#box
+{
+width: 200px;
+height: 100px;
+}
+#bold
+{
+background-color: blueviolet;
+width: 200px;
+}
+#clik
+{
+background-color: greenyellow;
+
+}
+#toTopButton
+{
+    background-color: blueviolet;
+    width: 50px;
+    height: 20px;
+    position: fixed;
+    bottom:15px;
+    right: 15px;
+    border: 1px solid gray;
+    padding: 10px;
+    cursor: pointer;
+    display: none;
+}
+#toTopButton:hover
+{
+    background-color: aqua;
+}
+#serce
+{
+    position: absolute;
+}
+
+
+
+#box2
+{
+    width: 200px;
+    height: 100px;
+}
+.photo
+{
+width:60px;
+
+}
+.photo:hover
+{
+    border-bottom: 2px solid red;
+    margin-bottom: -2px;
+   
+}
+
+#mainImage
+{
+    width: 300px;
+    height: 300px;
+    opacity: 1; 
+ 
+}
+.current
+{
+    border-bottom: 2px solid red;
+    margin-bottom: -2px;
+}
+
+
+.transition
+{
+    opacity: 0;
+    -webkit-transition: 1s;
+    -ms-transition: 1s;
+    -moz-transition: 1s;
+    -o-transition: 1s;
+    transition: 1s;
+}

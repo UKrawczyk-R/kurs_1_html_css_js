@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html lang="pl">
+    <head>
+        <title>TODO supply a title</title>
+        <meta Content-Type="text/HTML">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <script  type="text/javascript" src="code.js" async></script>
+        <script  type="text/javascript" src="jquery.js" async></script>
+        <script src="js-webshim/minified/polyfiller.js"></script>
+        <script src="http://api.html5media.info/1.1.8/html5media.min.js"></script>
+    </head>
+
+    <body>
+        <div>jakiś tekst</div>
+        <div id="wyjatkowy">wyjątkowy tekst</div>
+        <div>jakiś tekst</div>
+        <div><i><b>pogrubione</b></i></div>
+        <br>
+
+        <img  id="bascet" src="add-to-basket-3042 (1).png" alt="bascet icone" width="48" height="48"
+             ondragstart="dragstart(event)">
+        <div id="dropZone" ondragover="dragimg(event)" ondrop="drop(event)"></div>
+        <br>
+
+
+        <form action="">
+          serch: <input results="5" type="search" name="serchedValue">
+           email: <input type="email" name="email" >
+           url: <input type="url" placeholder="http://" >
+           tel: <input type="tel" pattern="^ \d(3) { |-}?\d(3) { |-}?\d(3)" placeholder="000-000-000" >
+           numer: <input type="number" value="0" min="0" max="10" step="1">
+           range: <input type="range" value="0" max="10" min="0" step="1" id="valueRange">
+           <input type="text" id="valueFromRange">
+           color: <input type="color">
+           time: <input type="time" >
+           week: <input type="week" >
+           month: <input type="month" >
+           date: <input type="date" >
+           date and time: <input type="datetime" >
+           date and time local: <input type="datetime-local" >
+
+           twój ulubiony kolor: <input type="text" list="kolor">
+         <datalist id="kolor">
+                <option value="biały"> </option>
+                <option value="czerwony"> </option>
+                <option value="czarny"> </option>
+                <option value="niebieski"> </option>
+         </datalist>
+
+
+
+           <input type="submit" value="send">
+
+           
+
+        </form>
+
+        <form id="AB">
+           imię: <input type="text" data-value="name" data-required="false">
+           email: <input type="email" data-value="email" data-required="true">
+           tel: <input type="tel" data-value="tel" data-required="true">
+        </form>
+        <ol>
+            <li class="a">wiadomość</li>
+            <li>Hi</li>
+            <li class="a">test</li>
+            <li>działa</li>
+
+        </ol>
+        <div class="a">jeszcze jedna wiadomość</div>
+
+        <video src="dog-kid.mp4 (1).mp4" width="574" height="324"  id="testvideo">
+          <source src="dog-kid.mp4 (1).mp4">
+        </video>
+        <br>
+
+        <button id="playpausebutton">play</button>
+
+
+    </body>

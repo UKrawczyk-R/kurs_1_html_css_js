@@ -1,0 +1,272 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+
+body{
+    background-image: url(../zdj/clouds.jpg) ;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#container
+{
+    width: 1004px;
+    margin: 0 auto;
+    font-family: Neucha, sans-serif;
+}
+/* text transform 
+.sample1
+{
+text-transform: capitalize;
+}
+.sample2
+{
+    text-transform: lowercase;
+}
+.sample3
+{
+    text-transform: uppercase;
+}*/
+
+
+/*text/box shadow, gradienty*/
+#box-shadow
+{
+width: 300px;
+height: 300px;
+border-radius: 20% 0;
+background: -webkit-linear-gradient(#dc6aeb9f, #448d76a4);
+background: -moz-linear-gradient(#dc6aeb9f, #448d76a4);
+-webkit-box-shadow: 39px 32px 35px -4px rgba(57, 71, 213, 1);
+-moz-box-shadow: 39px 32px 35px -4px rgba(57, 71, 213, 1);
+box-shadow: 39px 32px 35px -4px rgba(57, 71, 213, 1);
+margin-left: 40px;
+margin-top: 50px;
+}
+h1
+{ 
+    text-shadow: 8px 4px 3px rgba(89, 44, 212, 0.849);
+    line-height: 300px;
+    text-align: center;
+}
+
+/* płynne przejścia*/
+.transitions
+{  
+    margin-top: 50px;
+    margin-left: 40px;
+    height: fit-content;
+    width: 300px;
+}
+.button
+{
+    width: 100px;
+    height: 50px;
+    background-color: aquamarine;
+    -webkit-box-shadow: 14px 20px 30px 10px rgb(202, 73, 73);
+    -moz-box-shadow: 14px 20px 30px 10px rgb(202, 73, 73);
+    line-height: 50px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 50%;
+    -webkit-transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+    -moz-transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.transitions:hover .button
+{
+    margin-left: 200px;
+    background-color: rgb(84, 19, 110);
+    -webkit-transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -moz-transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.transitions:hover
+{
+    cursor: pointer;
+    color: rgb(247, 241, 242);
+    opacity: 0.7;  
+}
+
+/* transformacje 2d*/
+#transform
+{
+    width: 400px;
+    height: 100px;
+    background: -webkit-linear-gradient(#3295ceb9, #42d13dad);
+    background: -moz-linear-gradient(#3295cec0, #42d13da9);
+    margin-top: 50px;
+    margin-left: 50px;  
+}
+.transformacje
+{
+    float: left;
+    margin-top: 22px;
+    margin-left: 22px;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    width: 50px;
+    height: 50px;
+}
+#scale
+{ 
+    background-color: #5617cac0;
+
+}
+#scale:hover 
+{
+    -webkit-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+}
+#rotate
+{
+    background-color: #fc0439c0;
+}
+#rotate:hover 
+{ 
+    -webkit-transform: rotate(120deg);
+    -ms-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+}
+#translate
+{
+    background-color: #ffdb12c0;
+}
+#translate:hover 
+{ 
+    -webkit-transform: translate(10px, 5px);
+    -ms-transform: translate(10px, 5px);
+    -moz-transform: translate(10px, 5px);
+}
+#skew
+{
+    background-color: #068530c0;
+}
+#skew:hover 
+{ 
+    -webkit-transform: skew(0deg, 30deg);
+    -ms-transform: skew(0deg, 30deg);
+    -moz-transform: skew(0deg, 30deg);
+}
+#multi
+{
+    background-color: #1222ffc0;
+}
+#multi:hover 
+{ 
+    -webkit-transform: translateX(30px) rotateY(180deg);
+    -ms-transform: translateX(30px) rotateY(180deg);
+    -moz-transform:  translateX(30px) rotateY(180deg);
+}
+
+/*animacje*/
+
+#animation 
+{
+    margin-left: 50px;
+    margin-top: 50px;
+   width: 200px;
+   height: 200px;
+    -webkit-animation: obracanie 4s ease infinite alternate;
+}
+/*
+@-webkit-keyframes obracanie
+{
+    from
+    {
+
+    }
+    to
+    {
+    -webkit-transform: rotate(360deg);
+    }
+    
+}
+*/
+@-webkit-keyframes obracanie
+{
+    0%
+    {
+    -webkit-transform: translate(-10px, -10px);
+    }
+    25%  
+    {
+    -webkit-transform: rotateX(180deg)
+    }
+  75%  
+    {
+     -webkit-transform: rotateY(180deg)
+    }
+  100% 
+    {
+    -webkit-transform: scale(0.5);
+    }
+}
+
+/*kostka 3d*/
+    
+#scena
+{
+    width: 300px;
+    height: 300px;
+    margin: 200px;
+    position: relative;
+    -webkit-perspective: 1000px;
+    -ms-perspective: 1000px;
+    -moz-perspective: 1000px;
+}
+
+#kostka
+{
+  position: absolute;  
+  -webkit-transform-style: preserve-3d;
+  width: 300px;
+  height: 300px;
+/*width: fit contetnt;
+  height: fit contetnt;
+  porusza sie na szerszym obszarze*/
+  -webkit-animation: obracaniekostki 14s linear infinite alternate;
+ 
+}
+.img
+{
+    position: absolute;
+}
+
+div.chomik
+{
+-webkit-transform: translateZ(150px);
+}
+div.kot
+{
+-webkit-transform: rotateX(180deg) translateZ(150px);
+}
+div.lis
+{
+-webkit-transform: rotateY(-90deg) translateZ(150px);
+}
+div.pies
+{
+-webkit-transform: rotateY(90deg) translateZ(150px);
+}
+div.tiger
+{
+-webkit-transform: rotateX(-90deg) translateZ(150px);
+}
+div.ptak
+{
+ -webkit-transform: rotateX(90deg) translateZ(150px);
+}
+
+@-webkit-keyframes obracaniekostki
+{
+    from
+    {
+    }
+    to
+    {
+    -webkit-transform: rotateX(360deg) rotateY(360deg);
+    }
+}
+

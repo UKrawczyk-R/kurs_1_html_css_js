@@ -1,0 +1,2 @@
+ wklejamy na koncu body sciezke do pliku a plik umieszczamy tam gdzie index html
+<script src="prefixfree.min.js"></script>     
