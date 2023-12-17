@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE wizytowki SYSTEM "wizytowki.dtd"
+[
+<!ENTITY strona_www "<website>https://nazwa_strony.pl</website>">
+]
+>   <!--jeżeli plid dtd jest osobnym plikiem wizytowki.dtd-->
+<!-- <!DOCTYPE wizytowki> [ treść dtd] jeżeli mamy mały plik xml to mozemy dtd zrobic w nim ale lepiej miec to zewnętrznie(zrobic wewnętrznie i przenisc do pliku tak najłatwiej) gdyż plik dtd moze byc do wielu xml-->
+
+
+
+<wizytowki xmlns:wiz="http://www.w3.org/1999/xhtml">
+	<wiz:wizytowka id="a1">
+		<imie>Ula</imie>
+		<nazwisko>Krawczyk-Rodzim</nazwisko>
+		<tel typ="komorka" inny_atrybut="wartosc">tel:12121313</tel>
+		<tel typ="stacjonarny">tel:17-23233</tel>
+		<e-mail>urszula.karwczyk_007@wp.pl</e-mail>
+		&strona_www;
+	</wiz:wizytowka>
+	
+</wizytowki>

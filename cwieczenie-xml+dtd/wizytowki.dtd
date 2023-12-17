@@ -1,0 +1,36 @@
+
+<!ELEMENT wizytowki (wizytowka)>
+
+<!ATTLIST wizytowka id ID #REQUIED>
+<!ELEMENT wizytowka (imie, nazwisko, (tel | e-mail)+, website)> <!--nawias grupuje sprawia ze elementy sa jednoscia-->
+
+<!ELEMENT imie (#PCDATA)>
+
+<!ELEMENT nazwisko (#PCDATA)>
+
+<!ELEMENT tel (#PCDATA)>
+<!ATTRLIST tel typ (komorka | stacjonarny) #REQUIED
+			inny_atrybut CDATA #IMPLIED>
+<!--<!ATTLIST telefon typ (komorka | stacjonarny) #REQUIED>-->
+
+<!ELEMENT e-mail (#PCDATA)>
+
+<!ELEMENT website (#PCDATA)>
+
+
+
+<!--
+	1.komentarze dtd jak w html
+	2.aby zadeklarować jakis element piszemy<!ELEMENT nastepnie nzawę elementu i zawartość elementu>
+	3.rodzaje zawartości elementów: EMPTY{np <br />}, ANY, 
+	4. wizytowki (wizytowka)- tag wizytowki posiada dokładnie 1 element o nazwie wizytowka
+	5. #PCDATA = parsed character data sparsowane dane, osnacza ze bedzie tam tekst
+	   CDATA= character data znaki które nie są do przeparsowania
+	6.(wizytowka*) wystepuje 0 lub więcej razy
+	7.(wizytowka+) wystepuje 1 lub więcej razy
+	8.(wizytowka?) wystepuje 0 lub 1 raz
+	9. znak | :alternatywa oznacza że musie być wybrany chociaż jednen element ale także że mogą byc wybrane oba na raz(+),
+	10. <!ATTLIST telefon typ(komorka | stacjonarny) #REQUIED> deklaracja atrybutu, nazwa elelmentu, nazwa atrybutu, zawartość/typ atrybutu, domyślna wartość
+	11. rodzaje domyślnej wartośći: #REQUIED, #IMPLIED(opcjonalny)#FIXED(ustalony)
+	12. id ID atrybut id o typie ID
+-->
