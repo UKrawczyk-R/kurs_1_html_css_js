@@ -100,3 +100,18 @@ width:60px;
     -o-transition: 1s;
     transition: 1s;
 }
+/*dodanie obrazka z pulpitu na stronę*/
+#dropfilebox
+{
+    margin: 10px;
+    width: 450px;
+    height: 400px;
+    border: 1px solid #ccc;
+    text-align: center;
+    font-size: 30px;
+    color: #6b6a6a;
+}
+#previev_contener
+{
+    margin: 10px;
+}

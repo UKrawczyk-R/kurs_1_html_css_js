@@ -449,9 +449,6 @@ window.onload= function()
       }*/
 
 
-
-
-
       // var imageGalery = document.querySelector("#imageGalery");
 
 
