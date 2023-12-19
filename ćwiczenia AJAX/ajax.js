@@ -3,15 +3,15 @@ function ajaxInit()
 {
     document.getElementById('tekst').onmouseover = function(evt)
     {
-         evt.relatedTarget.style.cursor='pointer';
+         evt.target.style.cursor='pointer';
         
     }
     var XHR = null;
     try
     {
-    XHR=  new XMLHttpRequest();
+        XHR=  new XMLHttpRequest();
     }
-    catch(a)
+    catch(e)
     {
         try
     
@@ -22,7 +22,7 @@ function ajaxInit()
          {
             try
             {
-                XHR = new ActiveXObject(Microsoft.XMLHTTP);
+                XHR = new ActiveXObject("Microsoft.XMLHTTP");
             }
             catch(e3)
             {
@@ -33,21 +33,27 @@ function ajaxInit()
     return XHR; //!poniewż to zmienna lokalna (bo w funkcji) to na koniec ją zwracamy aby móc z niej korzystac nadal, możemy także umieśćić ją przed funkcją i będzie zmienna glonalną.
 
 }
+
 function fileToDiv(id, URL)
-{
-  XHR=  ajaxInit();
+{ 
+  XHR =  ajaxInit();
+
   if (XHR != null)
-   {
-     XHR.open("GET", URL, true); //! false-synchronicznie, true-asynchronicznie
-     XHR.onreadystatechance = function()
+   { 
+     XHR.open("GET", URL+"?random="+Math.random(), true); //! false-synchronicznie, true-asynchronicznie
+     alert("bb");
+     XHR.onreadystatechange = function()
      {  
         if (XHR.readyState == 1 || XHR.readyState == 2 || XHR.readyState == 3)
         {
-            document.getElementById('tekst').innerHTML = "<img src='loading.gif' alet='wczytują się dane' />"
+            document.getElementById('tekst').innerHTML = "<img src='loading.gif' alet='wczytują się dane' />";
         }
          else if (XHR.readyState == 4)
-        {
-            document.getElementById('tekst').innerHTML = XHR.responseText;
+         {
+            if (XHR.status == 200)
+              document.getElementById('tekst').innerHTML = XHR.responseText;
+            else
+              alert("Wystąpił błąd "+XHR.status+ " proszę o kontakt na...");
         }
      }
      
