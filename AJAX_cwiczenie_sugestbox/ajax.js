@@ -1,12 +1,21 @@
 window.onload = init;
  var XMLMainElement = null;
+ var licznik= 0;
+ var wybrany= 0;
+ var tempCode;
 function init()
     {
      document.getElementById("suggestBoxField").style.left = document.getElementById("wojewodztwo").offsetLeft + "px";
      document.getElementById("suggestBoxField").style.top = document.getElementById("wojewodztwo").offsetTop 
      + document.getElementById("wojewodztwo").offsetHeight + "px";
     
-     document.getElementById("wojewodztwo").onkeyup = showBox;
+     document.getElementById("wojewodztwo").onkeyup = function(evt)
+     {
+        showBox(evt);
+        checkKey(evt);
+        
+    }
+     
      suggestBox();
     }
 
@@ -46,16 +55,21 @@ function suggestBox()
     }
 }
 
-function showBox()
+function showBox(evt)
 {
+    if (evt.keyCode != 13 && evt.keyCode != 38 && evt.keyCode != 40 && evt.keyCode !=8)
+    {
+        licznik = 0;
+    }
+
     if(XMLMainElement != null)
     {
        document.getElementById("uggestBoxField").style.visibility= "hidden";
        document.getElementById("uggestBoxField").innerHTML = "";
 
-       var wojewodztwa = XMLMainElement.getElementsByTagName("województwo");
+       var wojewodztwa = XMLMainElement.getElementsByTagName("Województwo");
         
-        if (document.getElementById("hojewodztwo").value != "") // gdy cos wpiszemy w pole to niech sie pojawi jak k=jest nic to nie
+        if (document.getElementById("wojewodztwo").value != "") // gdy cos wpiszemy w pole to niech sie pojawi jak k=jest nic to nie
         {
         for(var i = 0; 1 < wojewodztwa.length; i++)
            if (wojewodztwa[i].getElementsByTagName("Nazwa")[0].firstChild.nodeValue.toLoverCase().indexOf(document.getElementById("wojewodztwo").value.toLoverCase()) == 0);//pobieramy z tag wojewodztwo  nazwę oraz jej dziecko czyli tekst jak damy node value to wyswietli nam tekst
@@ -77,7 +91,7 @@ function showBox()
            tmpDiv.onclick = function()
            {
             document.getElementById("wojewodztwo").value = this.innerHTML;
-            suggestBoxField.style.visibility = "hidden";
+            wybraniePodpowiedzi(this.innerHTML);
            }
 
            tmpDiv.innerHTML = (wojewodztwa[i].getElementsByTagName("Nazwa")[0].firstChild.nodeValue)
@@ -88,6 +102,108 @@ function showBox()
            if(document.getElementById("suggestBoxField").childNodes.lenght == 0); //ilośc podpowiedzi jaka sie pojawi jeżeli 0 to 0jak wiecej to tablica 
             document.getElementById("wojewodztwo").className = "error";
         }
+    }
+
+}
+function checkKey (evt)
+{
+    var iloscPodpowiedzi = document.getElementById("suggestBoxField").childNodes.lenght;
+    if (licznik == 0)
+    {
+      licznik = iloscPodpowiedzi;
+      wybrany = 0;
+    }
+
+    if (evt.keyCode == 40) //! 40 numer strzałki w dół
+     {   
+        if(tempCode == 'gora')
+            licznik++;
+
+        document.getElementById("suggestBoxField").childNodes[licznik%iloscPodpowiedzi].className= "podpowiedzihover";
+
+        wybrany= licznik% iloscPodpowiedzi;
+        licznik ++;
+        tempCode = 'dol';
+     }
+     else if (evt.keyCode == 38) //!numer strzałka w górę
+     {
+        if(tempCode == 'dol')
+            licznik--;
+
+        licznik --;
+        wybrany = licznik % iloscPodpowiedzi;
+        document.getElementById("suggestBoxField").childNodes[licznik%iloscPodpowiedzi].className= "podpowiedzihover";
+
+        tempCode = 'gora';
+     }
+    else if (evt.keyCode == 13) //!numer enter
+    {
+        document.getElementById("wojewodztwo").value= document.getElementById("suggestBoxField").childNodes[wybrany].firstChild[0];
+        
+        wybraniePodpowiedzi(document.getElementById("suggestBoxField").childNodes[wybrany].firstChild[0]);
+
+        licznik = 0;
+        wybrany = 0;
+
+        tempCode = 'enter';
+    }
+    else if (evt.keyCode == 8) //!numer backspace
+    {
+        
+        licznik = 0;
+        wybrany = 0;
+
+        tempCode = 'backspace';
+    }
+}
+
+function wybraniePodpowiedzi(wybranyRekord)
+{   
+    document.getElementById("tekst").innerHTML= ""; //!jeżeli wybrany rekord ma byc tylko jeden, bez dodawania poprzednich pod spodem.
+    document.getElementById("suggestBoxField").style.visibility = "hidden";
+
+    var wybraneWojewodztwo = null;
+
+    for( var i = 0; i <XMLMainElement.getElementsByTagName("Województwo").lenght ; i ++)
+     if (XMLMainElement.getElementsByTagName("Nazwa")[i].firstChild.nodeValue == wybranyRekord)
+    {
+        wybraneWojewodztwo = XMLMainElement.getElementsByTagName("Nazwa")[i].parentNode;
+        break;
+    }
+
+    if (wybraneWojewodztwo != null)
+    {
+    var table = document.createElement("table");
+
+    table.className = "daneOWojewodztwie";
+    var tableBody = document.createElement("tbody");
+
+    for (var i = 0; i< wybraneWojewodztwo.childNodes.lenght; i++)
+     {
+     
+      if (wybraneWojewodztwo.childNodes[i].nodeType == 1)
+      {
+        var row = document.createElement("tr");
+        var cell = document.createElement("td");
+        var header = document.createTextNode(wybraneWojewodztwo.childNodes[i].nodeName+": ");
+
+        cell.className = "cellHeader";
+      cell.appendChild(header);
+      row.appendChild(cell);
+
+      cell = documnet.createElement("td");
+    
+      var content= document.createTextNode(wybraneWojewodztwo.childNodes[i].firstChild.nodeValue);
+      cell.appendChild(content);
+      row.appendChild(cell);
+
+      tableBody.appendChild(row);
+      }
+     }
+
+    table.appendChild(tableBody);
+
+    document.getElementById("tekst").appendChild(table);
     }
 
 }

@@ -38,3 +38,15 @@
 {
     color: red;
 }
+.daneOWojewodztwie
+{
+    margin: 10px;
+    padding: 5px;
+    border: 1px solid black;
+}
+.cellHeader
+{
+    font-weight: bold;
+    padding-right: 10px;
+
+}
