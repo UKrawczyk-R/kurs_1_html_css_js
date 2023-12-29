@@ -66,6 +66,7 @@ function showBox(evt)
     {
        document.getElementById("uggestBoxField").style.visibility= "hidden";
        document.getElementById("uggestBoxField").innerHTML = "";
+       documnet.getElementById("wojewodztwo").className = "";
 
        var wojewodztwa = XMLMainElement.getElementsByTagName("Województwo");
         
@@ -74,8 +75,8 @@ function showBox(evt)
         for(var i = 0; 1 < wojewodztwa.length; i++)
            if (wojewodztwa[i].getElementsByTagName("Nazwa")[0].firstChild.nodeValue.toLoverCase().indexOf(document.getElementById("wojewodztwo").value.toLoverCase()) == 0);//pobieramy z tag wojewodztwo  nazwę oraz jej dziecko czyli tekst jak damy node value to wyswietli nam tekst
            {
-            var suggestBoxField =  document.getElementById("suggestBoxField") //indexof pokazuje nam pozycje tego co wpiszemy do wojewodztwo jezeli wpiszemy p to jak nie ma w "nazwie" to bedzie -1 jak jest na pierwszej pozycji to 0 na 2 to 1 itd
-            suggestBoxField.style.visibility= "visable";
+            var suggestBoxField =  document.getElementById("suggestBoxField"); //indexof pokazuje nam pozycje tego co wpiszemy do wojewodztwo jezeli wpiszemy p to jak nie ma w "nazwie" to bedzie -1 jak jest na pierwszej pozycji to 0 na 2 to 1 itd
+            suggestBoxField.style.visibility= "visible";
 
            var tmpDiv = document.createElement("div");
 
@@ -99,7 +100,7 @@ function showBox(evt)
            suggestBoxField.appendChild(tmpDiv);
 
            }
-           if(document.getElementById("suggestBoxField").childNodes.lenght == 0); //ilośc podpowiedzi jaka sie pojawi jeżeli 0 to 0jak wiecej to tablica 
+           if(document.getElementById("suggestBoxField").childNodes.length == 0); //ilośc podpowiedzi jaka sie pojawi jeżeli 0 to 0jak wiecej to tablica 
             document.getElementById("wojewodztwo").className = "error";
         }
     }
@@ -107,7 +108,7 @@ function showBox(evt)
 }
 function checkKey (evt)
 {
-    var iloscPodpowiedzi = document.getElementById("suggestBoxField").childNodes.lenght;
+    var iloscPodpowiedzi = document.getElementById("suggestBoxField").childNodes.length;
     if (licznik == 0)
     {
       licznik = iloscPodpowiedzi;
@@ -138,9 +139,9 @@ function checkKey (evt)
      }
     else if (evt.keyCode == 13) //!numer enter
     {
-        document.getElementById("wojewodztwo").value= document.getElementById("suggestBoxField").childNodes[wybrany].firstChild[0];
+        document.getElementById("wojewodztwo").value= document.getElementById("suggestBoxField").childNodes[wybrany].firstChild.nodeValue;
         
-        wybraniePodpowiedzi(document.getElementById("suggestBoxField").childNodes[wybrany].firstChild[0]);
+        wybraniePodpowiedzi(document.getElementById("suggestBoxField").childNodes[wybrany].firstChild.nodeValue);
 
         licznik = 0;
         wybrany = 0;
