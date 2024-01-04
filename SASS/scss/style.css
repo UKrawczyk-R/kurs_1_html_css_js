@@ -1,4 +1,48 @@
-h1 {
-  font-size: 15px;
+nav {
+  width: 350px;
+  display: block;
+  margin: 0 auto;
+}
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+nav li {
+  display: block;
+  float: left;
+}
+nav li li {
+  display: none;
+  float: none;
+}
+nav li li a:hover {
+  background-color: aqua;
+}
+nav li ul {
+  position: absolute;
+}
+nav li:hover li {
+  display: block;
+}
+nav a {
+  display: block;
+  padding: 6px 12px;
+  text-decoration: none;
+  color: black;
+  background-color: rgb(88, 161, 137);
+}
+nav a:hover {
   color: red;
+}
+
+.akapit {
+  width: 200px;
+  height: 100px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  clear: left;
+  display: block;
+  margin: 0 auto;
 }/*# sourceMappingURL=style.css.map */

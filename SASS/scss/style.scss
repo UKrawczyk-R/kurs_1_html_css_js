@@ -1,7 +1,18 @@
 
 @import "_variables.scss";
-h1
-{
-    font-size: $siezeOfHeader;
-    color: $colorOfHeader;   
-}
+@import "_nav.scss";
+@import "_mixins.scss";
+@import "_functions.scss";
+//h1
+//{
+   // font-size: $siezeOfHeader;
+   // color: $colorOfHeader;   
+//}
+ .akapit{
+        width: 200px;
+        height: 100px;
+       @include text-overflow();
+       clear: left;
+       @extend %center;
+       
+ }

@@ -1,0 +1,51 @@
+
+
+@import "_functions.scss";
+@import "_variables.scss";
+nav 
+ {  
+    width: 350px;
+    @extend %center;
+    
+    ul
+    {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    li
+    {
+        display: block;
+        float: left;
+        
+        li 
+        {
+            display: none;
+            float: none;
+            a:hover{
+                background-color: aqua;
+            }
+       
+        }
+        ul
+        {
+        position: absolute;
+        } 
+        &:hover li
+        {
+            display: block;
+        }
+    }
+    a
+    {
+        display: block;
+        padding: 6px 12px;
+        text-decoration: none;
+        background-color: $nav-link-bg-color-default;
+        color: automatic_contrast($nav-link-bg-color-default, $nav-link-color);
+        &:hover // &- odwołanie się do rodzica
+        {
+            color: $nav-link-color-hover;
+        }
+    }
+ }
