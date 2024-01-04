@@ -1,6 +1,6 @@
 @function automatic_contrast($bacgroundColor, $textColor)
 {
-    @if lighteness($bacgroundColor) < 50%
+    @if lightness($bacgroundColor) < 50%
         {
         @return lighten($textColor, 40%);
         }

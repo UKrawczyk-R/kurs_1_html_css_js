@@ -1,0 +1,20 @@
+@import "_mixins.scss";
+.image
+{
+    @include generateRow(4, 1%);
+    float: left;
+    background-color: #ececec;
+    border: 1px solid #ccc;   
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+    img
+    {
+        width: 100%;
+    }
+    .image-description
+    {
+        display: inline-block;
+        color: #555;
+    }
+}

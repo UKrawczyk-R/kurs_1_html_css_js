@@ -3,6 +3,7 @@
 @import "_nav.scss";
 @import "_mixins.scss";
 @import "_functions.scss";
+@import "_section.scss";
 //h1
 //{
    // font-size: $siezeOfHeader;
@@ -13,6 +14,7 @@
         height: 100px;
        @include text-overflow();
        clear: left;
-       @extend %center;
+       margin: 0 auto;
+       display: block;
        
  }

@@ -1,11 +1,10 @@
-
-
 @import "_functions.scss";
 @import "_variables.scss";
 nav 
  {  
     width: 350px;
-    @extend %center;
+    margin: 0 auto;
+    display: block;
     
     ul
     {

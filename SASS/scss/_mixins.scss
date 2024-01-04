@@ -3,3 +3,9 @@
     white-space: nowrap;
     text-overflow: ellipsis;
 }
+@mixin generateRow($number-of-items, $margin)
+{
+    width: ((100% - ($number-of-items*$margin))/ $number-of-items);
+    margin-right: $margin;
+    margin-bottom: $margin;
+}
