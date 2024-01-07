@@ -1,11 +1,27 @@
+
+
 @mixin text-overflow(){
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
 }
-@mixin generateRow($number-of-items, $margin)
+@mixin generateRow($number-of-items, $margin)//tworzy wybraną ilosc na szerokosc 
 {
-    width: ((100% - ($number-of-items*$margin))/ $number-of-items);
+    width: ((100% - (($number-of-items - 1)*$margin))/ $number-of-items);
     margin-right: $margin;
     margin-bottom: $margin;
+  //jezeli chcemy aby margines prawy za osatnim obrazkiem była taki jak lewy za pierwszym to usatwmy tak margines i dodajemy -1 w równaniu
+    &:nth-child(#{$number-of-items}n) //!interpolacja stringa, jeżlei chcemy użyc zmiennej to nalezy ja wpisac: # i w kalmerkach
+    {
+        margin-right: 0;
+    }
+}
+
+@mixin small-box($color)
+{
+    .small-box-#{$color}
+    {
+        @extend %small-box;
+        color: $color;
+    }
 }

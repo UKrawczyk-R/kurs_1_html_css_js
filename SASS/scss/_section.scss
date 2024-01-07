@@ -8,6 +8,19 @@
     text-align: center;
     padding: 10px;
     box-sizing: border-box;
+
+    @media (min-width: 767px ) and (max-width: 1280px)
+    {
+        @include generateRow(4, 1%); 
+    }
+    @media (min-width: 415px ) and (max-width: 768px)
+    {
+        @include generateRow(3, 1%); 
+    }
+    @media (min-width: 300px ) and (max-width: 414px)
+    {
+        @include generateRow(2, 1%); 
+    }
     img
     {
         width: 100%;
