@@ -1,0 +1,8 @@
+body {
+  margin: 0;
+}
+body p {
+  border-radius: 12px;
+  transform: rotate(25deg);
+  transform: rotateY(20deg);
+}/*# sourceMappingURL=style.css.map */
