@@ -1,0 +1,75 @@
+:root
+{
+    
+    scroll-behavior: smooth;
+   
+}
+*
+{
+    padding: 0;
+    margin: 0;
+}
+body 
+{
+  
+    background-size: 100%;
+    background-attachment: fixed;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 80%;
+    margin: 10px auto;
+
+}
+/*website title and top background*/
+#website_title
+{
+    background-image: url('../images/workstation.jpeg');
+    background-size: 100%;
+    position: relative;
+    padding: 7%;
+    height: 200px; 
+}
+hgroup h1
+{
+color: antiquewhite;
+padding: 1em;
+font-size: 200%;
+}
+hgroup h3
+{
+color: antiquewhite;
+padding: 1em;
+margin-left: 1em;
+
+}
+
+/*website title and top background end*/
+
+/*navigation*/
+
+#nav
+{
+    position: absolute;
+    bottom: 15%;
+    left: 30%;
+}
+
+.nav_menu 
+{
+    display: inline;
+    text-decoration: none;
+    padding: 10px;
+    width: 200%;
+    
+}
+
+.nav_menu a
+{
+    color: aquamarine;
+    text-decoration: none;
+    font-size: 200%;
+}
+
+.nav_menu a:hover
+{
+    color: rgb(186, 245, 24); 
+}
