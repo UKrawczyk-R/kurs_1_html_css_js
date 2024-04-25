@@ -22,7 +22,7 @@ body
 komentarz
 }
 */
-/#okienko
+#okienko
 
 {
     background-color: red;
@@ -276,7 +276,7 @@ behavior: url("../../vendor/piehtc/PIE.htc");
     position: absolute;
     background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(198,186,142,1) 41%, rgba(0,212,255,0.5) 100%);
     border-left: 0.1em solid #ccc;
-    border-bottom: 0.1em solid #ccc;76
+    border-bottom: 0.1em solid #ccc;
     font-size: 0.7em;
     opacity: 0;
     -webkit-transition: 1s;
