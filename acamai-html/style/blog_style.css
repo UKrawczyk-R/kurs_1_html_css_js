@@ -45,12 +45,18 @@ margin-left: 1em;
 /*website title and top background end*/
 
 /*navigation*/
+#web_menu
+{
+    position: relative;
+    background-color: black;
+}
 
 #nav
 {
     position: absolute;
     bottom: 15%;
     left: 30%;
+    
 }
 
 .nav_menu 

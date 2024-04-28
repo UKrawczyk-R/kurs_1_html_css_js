@@ -1,4 +1,9 @@
-
+:root
+{
+    
+    scroll-behavior: smooth;
+   
+}
 *
 {
     padding: 0;
@@ -30,7 +35,7 @@ body
 #web_title_mail
 {
     width: 100%;
-    display: inline-block;
+    position: relative;
 }
 #web_title_mail hgroup
 {
@@ -40,22 +45,21 @@ float: left;
 #web_title_mail address
 {
 margin-top: 10px;
-width: 10%;
-display: inline-block;
+position: absolute;
+right: 10px;
+
 }
 hgroup h3 
 {
 color: rgb(216, 192, 161);
-padding: 1em;
-
+padding: 10px;
 display: inline-block;
 border-right: 1px solid white;
 }
 hgroup h1
 {
 color: antiquewhite;
-margin-top: 20px;
-margin-left: 20px;
+padding: 7px;
 display: inline-block;
 font-size: 150%;
 
@@ -69,6 +73,7 @@ font-size: 150%;
     display: inline-block;
     position: relative;
     margin-top: 20px;
+    background-color: black;
  }
 /*navigation*/
 
@@ -78,9 +83,9 @@ font-size: 150%;
 }
 .nav_menu 
 {
-    display: inline;
+    display: block;
     text-decoration: none;
-    padding: 10px;
+    padding:5px;
     width: 50%;  
     
 }
