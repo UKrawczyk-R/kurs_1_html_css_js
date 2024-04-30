@@ -10,8 +10,8 @@
     <title>Document</title>
 </head>
 <body>
-    <nav>
-       <div id="website_top">
+    
+    <div id="website_top">
             <div id="web_title_mail">
                 <hgroup>
                     <h3>blog</h3>
@@ -19,270 +19,269 @@
                 </hgroup>
                 <address><a href="mailto:u.krawczyk.r@gmail.com?subject=zapytanie ze strony"><img src="images/email.png" alt="@"></a></address>
             </div>
-         <div id="web_menu">
-             <div id="nav">
-                <ul>
-                    <li class="nav_menu"><a href="index.html">home</a></li>
-                    <li class="nav_menu"><a href="about.html">about</a></li>
-                    <li class="nav_menu"><a href="blog.html">blog</a></li>
-                </ul>
-             </div>
-             <div id="social_media">
-               <img src="images/social-media-logo.png" alt="social media logo" usemap="#socialmedia">
-               <map name="socialmedia" id="map">
-                <area shape="circle" coords="20,21,21,00" href="https://www.facebook.com/urszula.k.krawczyk" alt="facebook">
-                <area shape="circle" coords="75,24,21,00" href="https://www.facebook.com/urszula.k.krawczyk" alt="instagram">
-                <area shape="circle" coords="127,23,21,00" href="https://twitter.com/tweeter" alt="twitter">
-                <area shape="circle" coords="179,23,21,00" href="https://www.linkedin.com/in/urszula-karwczyk-rodzim-3492132b6/" alt="linkedin">
-               </map>
+            <nav>
+                <div id="web_menu">
+                    <div id="nav">
+                        <ul>
+                            <li class="nav_menu"><a href="index.html">home</a></li>
+                            <li class="nav_menu"><a href="about.html">about</a></li>
+                            <li class="nav_menu"><a href="blog.html">blog</a></li>
+                        </ul>
                     </div>
-         </div>
-     </div>
-    </nav>
-    <main>
+                    <div id="social_media">
+                        <img src="images/social-media-logo.png" alt="social media logo" usemap="#socialmedia">
+                        <map name="socialmedia" id="map">
+                            <area shape="circle" coords="20,21,21,00" href="https://www.facebook.com/urszula.k.krawczyk" alt="facebook">
+                            <area shape="circle" coords="75,24,21,00" href="https://www.facebook.com/urszula.k.krawczyk" alt="instagram">
+                            <area shape="circle" coords="127,23,21,00" href="https://twitter.com/tweeter" alt="twitter">
+                            <area shape="circle" coords="179,23,21,00" href="https://www.linkedin.com/in/urszula-karwczyk-rodzim-3492132b6/" alt="linkedin">
+                        </map>
+                    </div>
+            </nav>
+            </div>
+    </div><!--website_top-->
+    
+    <main>      
+        <article id="system_fundamentals">
+            <header><h3>Operating System Fundamentals</h3></header>
+                <section><dfn>
+                    <ol>
+                        A Linux distribution (distro) is an operating system that usually includes:
+                            <li>the Linux kernel,</li>
+                            <li><abbr title="GNU's Not Unix">GNU</abbr> tools and libraries,</li>
+                            <li>added software, documentation,</li>
+                            <li>a window system (the most common being the X Window System, or, more recently, Wayland),</li>
+                            <li>a window manager,</li>
+                            <li>and a desktop environment.</dfn></li>
+                    </ol>
+                    
+                </section> 
+                <section>
+                    Linux users usually obtain their operating system by downloading one of the Linux distributions.  
+                    <ul>
+                        Some common distributions are:
+                        <li>CentOS</li>
+                        <li>Red Hat&reg Enterprise Linux (RHEL)</li>
+                        <li>Fedora</li>
+                        <li>SUSE Linux Enterprise</li>
+                        <li>openSUSE</li>
+                        <li>Debian</li>
+                        <li>Ubuntu</li>
+                        <li>Mandriva</li>
+                        <li>Mint</li>
+                    </ul>
+                    
+                </section> 
+                    
+                <section>
+                        Linux distributions are like each other, but each has its own strengths and weaknesses. The software packaged with each distribution can make a huge difference in how Linux works for you. Although you can always download or buy missing components, the software package is easier to use if the components have already been tested and compiled together to work with your distribution.
+                </section>
+                    
+        </article><!--system_fundamentals-->
+        <article id="getting_help">
+            <header><h3>Getting Help &amp; Man Pages in Linux</h3>
+            </header>
+            <p>
+                In Linux, getting help and using man pages (manual pages) is essential for understanding and using various commands and utilities. Man pages provide detailed information about commands, their options, and how to use them.   
+            </p>
+            <h4>man Command</h4>
+            <p>
+                The man command is used to access the manual pages for various commands.
+                Syntax: man &lbrack;options&rbrack; command
+                Example: man ls
+                The manual page will be displayed in your terminal, allowing you to navigate through it using the arrow keys. Press q to exit the manual page viewer.
+            </p>  
+                    <h4>--apropos</h4>
+                        <p>
+                            Search for commands related to a keyword.
+                            Syntax: command --apropos
+                        </p>
+                    
+                    <h4>--whatis</h4>
+                        <p>
+                            Display a one-line description of a command.
+                            Syntax: command --whatis
+                        </p>
+                
+                    <h4>--help</h4>
+                        <p>
+                            the --help option.
+                            Syntax: command --help
+                            Example: ls --help
+                            This will display information about the command's usage, available options, and arguments.
+                        </p>
+                    <h4>Info</h4>
+                        <p>
+                            Some commands have more comprehensive documentation in the Info format, which can be accessed using the info command.
+                            Syntax: info command
+                            Example: info coreutils
+                        </p>
+                
+            </article><!--getting_help-->
+
+            <article id="linux_commands">
+                <header><h3>linux commands</h3></header>
+                
+
+                <section>
+                    <h4>whoami </h4>
+                    <p>The whoami command is used to display the username you have used to log in to the system. Sometimes, you may need to log in to a system and switch among different users. If you lose track of which account you are logged into, use the whoami command. </p>
+                    <h4>hostname </h4>
+                    <p>The hostname command is used to display the hostname of the system you are currently logged in to. When you log in to different systems using the same terminal, you can use the hostname command to find the system on which you are presently running the command. </p>
+                    <h4>date</h4>
+                    <p>
+                    The date command displays the current date and time set on a system.
+                    The syntax of the date command is date +[format], where format is the string of characters that are used to display the different fields of the output.
+                    </p>
+                </section>
+
+
+                <section>
+                    <table>
+                        <colgroup>
+                            <col span="1" class="">
+                            <col span="1" class="">
+                        </colgroup>
+                        <caption>The syntax of the date command is date &plus;[format]</caption>
+                        <thead>
+                            <th>Character Format </th>
+                            <th>Description </th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>&percnt;d </td>
+                                <td>Displays the current day of the month (01 to 31).</td>
+                            </tr>
+                            <tr>
+                                <td>D &percnt;</td>
+                                <td>Displays the date in the format mm/dd/yy, where mm is month, dd is day, and yy is year. </td>
+                            </tr>
+                            <tr>
+                                <td>&percnt;H </td>
+                                <td>Displays the current hour in the 24-hour format (00 to 23).  </td>
+                            </tr>
+                            <tr>
+                                <td>&percnt;l</td>
+                                <td>Displays the current hour (1 to 12). This choice does not display A.M. or
+                                    P.M. after the hour.  </td>
+                            </tr>
+                            <tr>
+                                <td>&percnt;m</td>
+                                <td>Displays the current month of the year (01 to 12).</td>
+                            </tr>
+                            <tr>
+                                <td>&percnt;M</td>
+                                <td>Displays the current minute (00 to 59). </td>
+                            </tr>
+                            <tr>
+                                <td>&percnt;r</td>
+                                <td>Displays the time in the 12-hour format; i.e., hh:mm:ss [A.M. or P.M.]. </td>
+                            </tr>
+                            <tr>
+                                <td>&percnt;R</td>
+                                <td>Displays the time in the 24-hour format; i.e., hh:mm. This choice does not display the seconds.</td>
+                            </tr>
+                            <tr>
+                                <td>&percnt;S</td>
+                                <td>Displays the seconds (00 to 60).</td>
+                            </tr>
+                            <tr>
+                                <td>&percnt;T</td>
+                                <td>Displays the time in the 24-hour format; i.e., hh:mm:ss. This choice displays the seconds also. </td>
+                            </tr>
+                            <tr>
+                                <td>&percnt;y</td>
+                                <td>Displays the last two digits of the current year. </td>
+                            </tr>
+                            <tr>
+                                <td>&percnt;Y</td>
+                                <td>Displays the current year in four digits(yyyy). </td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="2">hints can be displayed by command: man date or date --help(brief help)</td>
+                            </tr>
+                        </tfoot>
+                        </tfoot>
+                    </table>
+                </section>
+
+                    <section>
+                        <h4>uptime </h4>
+                        <p>The uptime command displays the time from when a system started running. The output of the uptime command gives information about the current time, how long the system is running, and how many users are currently logged in. </p>
+                        <h4>who </h4>
+                        <p>If you&rsquo;re working on a server, there may be multiple users logged in at the same time. The who command is used to figure out the details of users currently logged in to a system. The output of the who command includes the username, the name of the system from which the user is connected, and the time since the user is connected.</p>
+                        <h4>w </h4>
+                        <p>The w command is primarily used to display the details of users who are currently logged in to a system and their transactions. The first line of the output displays the status of the system. The second line of the output displays a table with the first column listing the users logged in to the system and the last column showing the current activities of the users. The remaining columns of the table show different attributes associated with the users. </p>
+                        <h4>last </h4>
+                        <p>The last command displays the history of user log in and log out, along with the actual time and date. It also has options that enable you to filter users who have logged in through a specific terminal. The last command retrieves information from /var/log/wtmp file. </p>
+                    </section>
+
+            </article><!--linux_commands-->
+
+
+
+                    
+
+                    <!--cyctaty i cydzysłowy
+                    &frac14;
+                    &quot;tekst &quot;<br> 
+                    &ldquo;tekst&rdquo; <br>
+                    <q> tekst</q>
+                    <blockquote lang="pl" cite="https://www.facebook.com/Cytaty.wielkich.ludzi/photos/a.161840153960731/1067137440097660/?type=3&locale=pl_PL">
+                        W każdym z nas walczą dwa wilki. Jeden jest zły, to gniew, zazdrość, chciwość, pretensja, kłamstwo, pogarda i ego. Drugi jest dobry, to radość, pokój, miłość, nadzieja, uprzejmość, pokora, empatia i prawda. Który wilk wygra?<strong>Ten, którego karmisz.</strong>
+                    </blockquote>
+                    <cite>indiańskie powiedzenie</cite>>
+                    -->
+
+                    <!--figure tag grupujący zawierający podpis
+                    <figure>
+                        <img src="" alt="">
+                        <img src="" alt="">
+                        <figcaption>krótki opis zdjęć- podpis</figcaption>
+                    </figure>
+                    -->
+
+                    <!--tabela
+                    <table>
+                        <colgroup>
+                            <col span="1" class="">
+                            <col span="1" class="">
+                        </colgroup>
+                        <caption>nazwa tabeli/podpis</caption>
+                        <thead>
+                            <th>nazwa kolumny</th>
+                            <th>nazwa kloumny</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                        <tfoot> 
+                            <tr>
+                                <td colspan="2">  </td>
+                            </tr>
+                        </tfoot>
+                        </tfoot>
+                    </table>
+                -->
+            
+                </section>
+
         
-        <section>
-           
-             
-    <article id="system_fundamentals">
-        <header><h3>Operating System Fundamentals</h3></header>
-           <section><dfn>
-             <ol>
-                 A Linux distribution (distro) is an operating system that usually includes:
-                    <li>the Linux kernel,</li>
-                    <li><abbr title="GNU's Not Unix">GNU</abbr> tools and libraries,</li>
-                    <li>added software, documentation,</li>
-                    <li>a window system (the most common being the X Window System, or, more recently, Wayland),</li>
-                    <li>a window manager,</li>
-                    <li>and a desktop environment.</dfn></li>
-             </ol>
-            
-            </section> 
-            <section>
-              Linux users usually obtain their operating system by downloading one of the Linux distributions.  
-              <ul>
-                Some common distributions are:
-                <li>CentOS</li>
-                <li>Red Hat&reg Enterprise Linux (RHEL)</li>
-                <li>Fedora</li>
-                <li>SUSE Linux Enterprise</li>
-                <li>openSUSE</li>
-                <li>Debian</li>
-                <li>Ubuntu</li>
-                <li>Mandriva</li>
-                <li>Mint</li>
-              </ul>
-            
-            </section> 
-            
-            <section>
-                Linux distributions are like each other, but each has its own strengths and weaknesses. The software packaged with each distribution can make a huge difference in how Linux works for you. Although you can always download or buy missing components, the software package is easier to use if the components have already been tested and compiled together to work with your distribution.
-            </section>
-            
-           <section></section>
-        <footer></footer>
-    </article>
-    <article>
-        <header><h3>Getting Help &amp; Man Pages in Linux</h3></header>
-        In Linux, getting help and using man pages (manual pages) is essential for understanding and using various commands and utilities. Man pages provide detailed information about commands, their options, and how to use them. 
 
-             <h4>man Command</h4>
-                <p>
-                    The man command is used to access the manual pages for various commands.
-                    Syntax: man [options] command
-                    Example: man ls
-                    The manual page will be displayed in your terminal, allowing you to navigate through it using the arrow keys. Press q to exit the manual page viewer.
-                </p>  
-             <h4>--apropos</h4>
-                <p>
-                    Search for commands related to a keyword.
-                    Syntax: command --apropos
-                </p>
-            
-             <h4>--whatis</h4>
-                <p>
-                    Display a one-line description of a command.
-                    Syntax: command --whatis
-                </p>
-        
-             <h4>--help</h4>
-                <p>
-                    the --help option.
-                    Syntax: command --help
-                    Example: ls --help
-                    This will display information about the command's usage, available options, and arguments.
-                </p>
-             <h4>Info</h4>
-                <p>
-                    Some commands have more comprehensive documentation in the Info format, which can be accessed using the info command.
-                    Syntax: info command
-                    Example: info coreutils
-                </p>
-        
-    </article>
-
-    <article>
-        <header><h3>linux commands</h3></header>
-        
-
-        <h4>whoami </h4>
-        <p>The whoami command is used to display the username you have used to log in to the system. Sometimes, you may need to log in to a system and switch among different users. If you lose track of which account you are logged into, use the whoami command. </p>
-
-        <h4>hostname </h4>
-        <p>The hostname command is used to display the hostname of the system you are currently logged in to. When you log in to different systems using the same terminal, you can use the hostname command to find the system on which you are presently running the command. </p>
-
-        <h4>date</h4> 
-        <p>  
-        The date command displays the current date and time set on a system.
-        The syntax of the date command is date +[format], where format is the string of characters that are used to display the different fields of the output.
-        </p> 
-
-
-        <table>
-            <colgroup>
-                <col span="1" class="">
-                <col span="1" class="">
-            </colgroup>
-            <caption>The syntax of the date command is date &plus;[format]</caption>
-            <thead>
-                <th>Character Format </th>
-                <th>Description </th>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>&percnt;d </td>
-                    <td>Displays the current day of the month (01 to 31).</td>
-                </tr>
-                <tr>
-                    <td>D &percnt;</td>
-                    <td>Displays the date in the format mm/dd/yy, where mm is month, dd is day, and yy is year. </td>
-                </tr>
-                <tr>
-                    <td>&percnt;H </td>
-                    <td>Displays the current hour in the 24-hour format (00 to 23).  </td>
-                </tr>
-                <tr>
-                    <td>&percnt;l</td>
-                    <td>Displays the current hour (1 to 12). This choice does not display A.M. or  
-                        P.M. after the hour.  </td>
-                </tr>
-                <tr>
-                    <td>&percnt;m</td>
-                    <td>Displays the current month of the year (01 to 12).</td>
-                </tr>
-                <tr>
-                    <td>&percnt;M</td>
-                    <td>Displays the current minute (00 to 59). </td>
-                </tr>
-                <tr>
-                    <td>&percnt;r</td>
-                    <td>Displays the time in the 12-hour format; i.e., hh:mm:ss [A.M. or P.M.]. </td>
-                </tr>
-                <tr>
-                    <td>&percnt;R</td>
-                    <td>Displays the time in the 24-hour format; i.e., hh:mm. This choice does not display the seconds.</td>
-                </tr>
-                <tr>
-                    <td>&percnt;S</td>
-                    <td>Displays the seconds (00 to 60).</td>
-                </tr>
-                <tr>
-                    <td>&percnt;T</td>
-                    <td>Displays the time in the 24-hour format; i.e., hh:mm:ss. This choice displays the seconds also. </td>
-                </tr>
-                <tr>
-                    <td>&percnt;y</td>
-                    <td>Displays the last two digits of the current year. </td>
-                </tr>
-                <tr>
-                    <td>&percnt;Y</td>
-                    <td>Displays the current year in four digits(yyyy). </td>
-                </tr>
-            </tbody>
-            <tfoot> 
-                <tr>
-                    <td colspan="2">hints can be displayed by command: man date or date --help(brief help)</td>
-                </tr>
-            </tfoot>
-            </tfoot>
-        </table>
-
-            <h4>uptime </h4>
-            <p>The uptime command displays the time from when a system started running. The output of the uptime command gives information about the current time, how long the system is running, and how many users are currently logged in. </p>
-
-            <h4>who </h4>
-            <p>If you&rsquo;re working on a server, there may be multiple users logged in at the same time. The who command is used to figure out the details of users currently logged in to a system. The output of the who command includes the username, the name of the system from which the user is connected, and the time since the user is connected.</p> 
-
-            <h4>w </h4>
-            <p>The w command is primarily used to display the details of users who are currently logged in to a system and their transactions. The first line of the output displays the status of the system. The second line of the output displays a table with the first column listing the users logged in to the system and the last column showing the current activities of the users. The remaining columns of the table show different attributes associated with the users. </p>
-
-            <h4>last </h4>
-            <p>The last command displays the history of user log in and log out, along with the actual time and date. It also has options that enable you to filter users who have logged in through a specific terminal. The last command retrieves information from /var/log/wtmp file. </p>
-
-    </article>
-
-
-
-            
-
-            <!--cyctaty i cydzysłowy
-            &frac14;
-            &quot;tekst &quot;<br> 
-            &ldquo;tekst&rdquo; <br>
-            <q> tekst</q>
-            <blockquote lang="pl" cite="https://www.facebook.com/Cytaty.wielkich.ludzi/photos/a.161840153960731/1067137440097660/?type=3&locale=pl_PL">
-                W każdym z nas walczą dwa wilki. Jeden jest zły, to gniew, zazdrość, chciwość, pretensja, kłamstwo, pogarda i ego. Drugi jest dobry, to radość, pokój, miłość, nadzieja, uprzejmość, pokora, empatia i prawda. Który wilk wygra?<strong>Ten, którego karmisz.</strong>
-            </blockquote>
-            <cite>indiańskie powiedzenie</cite>>
-            -->
-
-            <!--figure tag grupujący zawierający podpis
-            <figure>
-                <img src="" alt="">
-                <img src="" alt="">
-                <figcaption>krótki opis zdjęć- podpis</figcaption>
-            </figure>
-            -->
-
-            <!--tabela
-            <table>
-                <colgroup>
-                    <col span="1" class="">
-                    <col span="1" class="">
-                </colgroup>
-                <caption>nazwa tabeli/podpis</caption>
-                <thead>
-                    <th>nazwa kolumny</th>
-                    <th>nazwa kloumny</th>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                </tbody>
-                <tfoot> 
-                    <tr>
-                        <td colspan="2">  </td>
-                    </tr>
-                </tfoot>
-                </tfoot>
-            </table>
-        -->
-       
-        </section>
-
- 
-
-    </main>
+            </main>
     <aside>
         
     </aside>
