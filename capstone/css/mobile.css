@@ -23,4 +23,8 @@
     -ms-flex-direction: column; 
     box-orient: vertical;
 }
+aside img
+{
+    display: none;
+}
 

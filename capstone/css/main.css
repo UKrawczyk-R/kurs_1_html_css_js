@@ -1,7 +1,12 @@
 
+:root
+{
+    scroll-behavior: smooth;
+}
 *
 {
     margin: 0;
+    padding: 0;
     font-family: "Cormorant", serif;
     box-sizing: border-box;
 }
@@ -31,17 +36,21 @@
     flex-direction: row; 
     -ms-flex-direction: row; 
     box-orient: horizontal;
-}
+  
+    }
+
 header
 {
-    background-color: brown;
+    background-image: url(../images/baner.jpg) ;
+    background-attachment: fixed;
+    background-size: cover;
 }
 .container {
     max-width: 1050px;
     width: 90%;
     margin: auto;
   }
-  
+  /*burger menu start*/
   .navbar {
     width: 100%;
     box-shadow: 0 1px 4px rgba(146, 161, 176, 0.295);
@@ -110,7 +119,7 @@ header
     height: 4px;
     width: 100%;
     border-radius: 10px;
-    background: #0e2431;
+    background: rgb(53, 230, 156);
   }
   
   .nav-container .hamburger-lines .line1 {
@@ -153,7 +162,8 @@ header
     top: 5px;
     right: 15px;
     font-size: 1.2rem;
-    color: #0e2431;
+    color: white;
+    background: linear-gradient(to bottom, #05090c, rgb(18, 150, 160)) ;
   }
   
   .nav-container input[type="checkbox"]:checked ~ .menu-items {
@@ -172,28 +182,50 @@ header
 {
     transform: rotate(-45deg);
 }
+/*burger menu end*/
+
 nav
 {
-    -ms-flex: 1;
+    -ms-flex: 1; 
     flex: 1;
-    background-color: rgb(165, 42, 144);
+    padding: 10px;
+    background-color: aquamarine;
 }
-
-
 
 article
 {
     -ms-flex: 7; 
     flex: 7;
-    background-color: rgb(91, 165, 42);
-} 
+    padding: 10px;
+}
+article > * 
+{
+ text-align: center;
+ font-size: 2rem;
+}
+ 
+    
+ 
 aside
 {
-    -ms-flex: 1;
-    flex: 1;
+    -ms-flex: 1.5;
+    flex: 1.5;
     background-color: rgb(42, 116, 165);
+    border-radius:20px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    font-size: large;
+    padding: 1rem;
 }
 footer
 {
-    background-color: rgb(165, 142, 42);
+ 
+}
+/*top button*/
+#top 
+{
+position: absolute;
+right: 1px;
+
+z-index: 1;
 }
