@@ -36,6 +36,7 @@
     flex-direction: row; 
     -ms-flex-direction: row; 
     box-orient: horizontal;
+    
   
     }
 
@@ -54,6 +55,7 @@ header
   .navbar {
     width: 100%;
     box-shadow: 0 1px 4px rgba(146, 161, 176, 0.295);
+    z-index: 2;
   }
   
   .nav-container {
@@ -71,12 +73,13 @@ header
     list-style: none;
   }
   
-  .navbar .nav-container a {
+  .navbar .nav-container li>a {
     text-decoration: none;
     color: #05090c;
     font-weight: 700;
     font-size: 1.5rem;
     padding: 0.7rem;
+    
   }
   
   .navbar .nav-container a:hover{
@@ -157,11 +160,12 @@ header
     font-weight: 500;
   }
   
-  .logo {
+  .logo a{
+    text-decoration: none;
     position: absolute;
     top: 5px;
     right: 15px;
-    font-size: 1.2rem;
+    font-size: 1em;
     color: white;
     background: linear-gradient(to bottom, #05090c, rgb(18, 150, 160)) ;
   }
@@ -229,3 +233,214 @@ right: 1px;
 
 z-index: 1;
 }
+/*contact us*/
+
+  input, select, textarea {
+    color: #5A5A5A;
+    margin: 0;
+  }
+  
+  input {
+    line-height: normal;
+  }
+  
+  textarea {
+    overflow: auto;
+  }
+  
+  #container_form 
+  {
+    width: fit-content;
+  }
+ 
+  form {
+    padding: 37.5px;
+    margin: 20px 0;
+  }
+  
+  h1 {
+    color: #474544;
+    font-size: 32px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    border-bottom: solid 1px #474544;
+    max-width: 400px;
+    margin: 20px auto;
+  }
+  
+  
+  .email {
+      float: right;
+      width: 45%;
+  }
+  
+  input[type='text'], [type='email'], select, textarea {
+    background: none;
+    border: none;
+    border-bottom: solid 1px #474544;
+    color: #474544;
+    font-size: 0.5em;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin: 0em 0 1.875em 0;
+    padding: 0 0 0.875em 0;
+    text-transform: capitalize;
+      width: 100%;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -ms-box-sizing: border-box;
+      -o-box-sizing: border-box;
+      box-sizing: border-box;
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      -ms-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s;
+  }
+  
+  input[type='text']:focus, [type='email']:focus, textarea:focus {
+      outline: none;
+      padding: 0 0 0.875em 0;
+  }
+  
+  .message {
+      float: none;
+  }
+  
+  .name {
+      float: left;
+      width: 45%;
+  }
+  
+  select {
+    background: url('https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-down-32.png') no-repeat right;
+    outline: none;
+  }
+  
+  select::-ms-expand {
+    display: none;
+  }
+  
+
+  
+  .telephone {
+    float: right;
+    width: 45%;
+  }
+  .subject{
+    float: left;
+    width: 45%;
+  }
+  
+  textarea {
+      line-height: 150%;
+      height: 150px;
+      resize: none;
+    width: 100%;
+  }
+  
+  ::-webkit-input-placeholder {
+      color: #474544;
+  }
+  
+  :-moz-placeholder { 
+      color: #474544;
+      opacity: 1;
+  }
+  
+  ::-moz-placeholder {
+      color: #474544;
+      opacity: 1;
+  }
+  
+  :-ms-input-placeholder {
+      color: #474544;
+  }
+  
+  #form_button {
+    background: none;
+    border: solid 2px #474544;
+    color: #474544;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 0.5em;
+    font-weight: bold;
+    outline: none;
+    padding: 20px 35px;
+    text-transform: uppercase;
+    -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      -ms-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s;
+  }
+  
+  #form_button:hover {
+    background: #474544;
+    color: #F2F3EB;
+  }
+  /*contact us end*/
+
+  /*social-media bar*/
+  
+  .icon-bar {
+    display: flex;
+    flex-direction: column; 
+    -ms-flex-direction: column; 
+    box-orient: vertical;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+     justify-content: center;
+     -ms-flex-pack: center;
+    
+     -ms-flex-align: center;
+     align-items: center;
+     margin-top: 200px;
+    }
+  
+  
+  .icon-bar a {
+    display: block;
+    text-align: center;
+    padding: 16px;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 20px;
+  }
+  
+  .icon-bar a:hover {
+    background-color: #000;
+  }
+  
+  .facebook {
+    background: #3B5998;
+    color: white;
+    width: 51px;
+  }
+  
+  .twitter {
+    background: #55ACEE;
+    color: white;
+  }
+  
+  .google {
+    background: #dd4b39;
+    color: white;
+  }
+  
+  .linkedin {
+    background: #007bb5;
+    color: white;
+    width: 51px;
+  }
+  
+  .youtube {
+    background: #bb0000;
+    color: white;
+  }
+  
+  .content {
+    margin-left: 75px;
+    font-size: 30px;
+  }
+  /*end social media bar*/
