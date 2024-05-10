@@ -11,7 +11,7 @@
 {
     #container
    {
-    
+    border: 5px solid black;
    } 
 }
 .icon-bar {
@@ -30,6 +30,44 @@
 aside img
 {
     display: none;
+}
+.icon-bar{
+    margin-top: 0;
+    height: fit-content;
+}
+aside
+{
+    -ms-flex: 1.5;
+    flex: 1.5;
+    border-radius:0px;
+    background-color: rgb(255, 255, 255);
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: large;
+    padding: 0.5rem;
+    margin-right: 0;
+    -webkit-box-shadow: 5px 5px 16px 0px rgba(215, 217, 217, 1);
+    -moz-box-shadow: 5px 5px 16px 0px rgba(215, 217, 217, 1);
+    box-shadow: 5px 5px 16px 0px rgba(215, 217, 217, 1);
+    border-top: 1px solid black;
+
+}
+aside>ul{
+    list-style: none;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-left: 0;
+    
+}
+.navbar .menu-items {
+    border: 1px solid black;
+    padding-top: 20px;
+    background-color: rgb(255, 255, 255);
+    
+    height: fit-content;
+    width: 50%;
+
 }
 @media screen and (max-width: 768px) {
     #container {
