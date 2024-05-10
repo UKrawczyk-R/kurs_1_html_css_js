@@ -208,8 +208,11 @@ article
      -ms-flex-pack: center;
     
      -ms-flex-align: center;
-     align-items: center;
-   
+     align-items: center; 
+}
+#services
+{
+ column-count: 2;   
 }
 
 
@@ -318,6 +321,7 @@ z-index: 1;
     border-bottom: solid 1px #474544;
     max-width: 400px;
     margin: 20px auto;
+    text-align: center;
   }
   
   

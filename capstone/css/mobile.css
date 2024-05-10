@@ -3,7 +3,7 @@
 {
    #container
    {
-    border: 10px solid gray;
+    border: 5px solid gray;
    }
 }
 
@@ -43,13 +43,12 @@ aside
     background-color: rgb(255, 255, 255);
     margin-top: 0;
     margin-bottom: 0;
-    font-size: large;
-    padding: 0.5rem;
     margin-right: 0;
-    -webkit-box-shadow: 5px 5px 16px 0px rgba(215, 217, 217, 1);
-    -moz-box-shadow: 5px 5px 16px 0px rgba(215, 217, 217, 1);
-    box-shadow: 5px 5px 16px 0px rgba(215, 217, 217, 1);
+    font-size: large;
+    padding:0;
+    box-shadow: none;
     border-top: 1px solid black;
+    
 
 }
 aside>ul{
@@ -68,6 +67,10 @@ aside>ul{
     height: fit-content;
     width: 50%;
 
+}
+#services
+{
+ column-count: none;   
 }
 @media screen and (max-width: 768px) {
     #container {
