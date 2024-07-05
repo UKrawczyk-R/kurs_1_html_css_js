@@ -52,14 +52,24 @@
             <h2>&bull;Please enter your credentials&bull;</h2>
             <div id="container_form">
                 <form action="successful.html" method="get">
-                    <label for="username">Username: </label>
-                    <input required="required" size="25" type="text" id="username" name="UserName" />
-                    <label for="password">&nbsp;Password: </label>
-                    <input required="required" size="25" type="password" id="password" name="Password" />
-                    <input id="form_button" type="submit" value="Login" />
-                    <label for="employee" style='font-size: small'>Please check if you are an employee: </label>
-                    <input type="checkbox" id="employee" name="employee" value="Employee" style='vertical-align: middle'>
-                    <p id="register">Don't have an account? Click <a href="contact.html">here</a> to get started.</p>
+                    <div class="name">
+                        <label for="username"></label>
+                        <input placeholder="Username"required="required" size="25" type="text" id="username" name="UserName" />
+                    </div>
+                    <div class="email">
+                        <label for="password"></label>
+                        <input placeholder="password" required="required" size="25" type="password" id="password" name="password" />
+                    </div>
+                    <div class="submit">
+                        <input id="form_button" type="submit" value="Login" />
+                    </div>
+                    <div >
+                        <div class="login" >
+                            <label for="employee">Please check if you are an employee:&nbsp; </label>
+                            <input class="checkbox" type="checkbox" id="employee" name="employee" value="Employee" />
+                        </div>
+                        <span class="login" id="register">Don't have an account? Click <a href="contact.html">here</a> to get started.</span>
+                    </div>
                 </form>
             </div>
              

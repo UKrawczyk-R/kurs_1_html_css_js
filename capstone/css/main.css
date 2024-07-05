@@ -319,7 +319,7 @@ z-index: 1;
     letter-spacing: 5px;
     text-transform: uppercase;
     border-bottom: solid 1px #474544;
-    max-width: 400px;
+    max-width: 600px;
     margin: 20px auto;
     text-align: center;
   }
@@ -330,7 +330,7 @@ z-index: 1;
       width: 45%;
   }
   
-  input[type='text'], [type='email'], select, textarea {
+  input[type='text'], [type='email'], [type='password'], select, textarea {
     background: none;
     border: none;
     border-bottom: solid 1px #474544;
@@ -383,11 +383,15 @@ z-index: 1;
     float: right;
     width: 45%;
   }
-  .subject{
+  .subject {
     float: left;
     width: 45%;
   }
-  
+  .submit
+  {
+    float: left;
+    width: 45%;
+  }
   textarea {
       line-height: 150%;
       height: 150px;
@@ -436,7 +440,28 @@ z-index: 1;
     color: #F2F3EB;
   }
   /*contact us end*/
-
+/*login*/
+  .login{
+   float: right;
+   width: 45%;
+   padding: 10px 0 10px 0;
+  }
+  .login a{
+    text-decoration: none;
+  
+    top: 5px;
+    right: 15px;
+    font-size: 1em;
+    color: white;
+    background-color:  rgb(18, 150, 160) ;
+    padding: 0 10px 0 10px;
+  }
+  .checkbox{
+   width: 20px;
+   height: 20px;
+   position: absolute;
+  
+  }
   /*social-media bar*/
   
   .icon-bar {
