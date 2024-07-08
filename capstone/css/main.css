@@ -367,6 +367,9 @@ z-index: 1;
       float: left;
       width: 45%;
   }
+ .login_form>input{
+    text-transform: none;
+  }
   
   select {
     background: url('https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-down-32.png') no-repeat right;
