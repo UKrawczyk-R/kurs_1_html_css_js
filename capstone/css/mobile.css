@@ -68,6 +68,17 @@ aside>ul{
     width: 50%;
 
 }
+
+.submit, .login
+{
+  width: 100%;
+  
+  padding-bottom: 20px;
+
+}
+
+
+
 #services
 {
  column-count: none;   

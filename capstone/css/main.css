@@ -371,6 +371,12 @@ z-index: 1;
     text-transform: none;
   }
   
+
+.description{
+font-size: 150%;
+color: #474544;
+}
+
   select {
     background: url('https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-down-32.png') no-repeat right;
     outline: none;
